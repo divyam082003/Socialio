@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:elevation="2dp"
+    android:layout_margin="0.5dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="6dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="2dp"
+            android:padding="2dp"
+            >
+
+            <!-- Profile Image -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/DPVprofileImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/profile_image"
+                android:scaleType="centerCrop"
+                android:background="@drawable/image_bg_circle"
+                android:contentDescription="Profile Image"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="@id/DPVprofileImage"
+                app:layout_constraintLeft_toRightOf="@id/DPVprofileImage"
+                app:layout_constraintBottom_toBottomOf="@id/DPVprofileImage"
+                >
+
+                <TextView
+                    android:id="@+id/DPVuserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    android:padding="2dp"
+                    />
+
+                <TextView
+                    android:id="@+id/DPVdateTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_light"
+                    android:padding="2dp"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/DPVeditBT"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/DPVprofileImage"
+                app:layout_constraintBottom_toBottomOf="@id/DPVprofileImage"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/post_sample"
+            android:scaleType="centerCrop"
+            android:contentDescription="Post Image"
+            />
+
+        <EditText
+            android:id="@+id/DPVpostText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is the description of the postModel."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_light"
+            android:background="@color/white"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/postLikeLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="?attr/selectableItemBackground"
+                >
+
+                <ImageView
+                    android:id="@+id/DPVlikeIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/ic_like"
+                    android:contentDescription="Like Icon"
+                    app:tint="@color/colorGray"
+                    />
+
+                <TextView
+                    android:id="@+id/DPVlikeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/colorGray"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:padding="2dp"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/postDisLikeLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="?attr/selectableItemBackground"
+                >
+
+                <ImageView
+                    android:id="@+id/DPVdislikeIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/dislike"
+                    android:contentDescription="Comment Icon"
+                    app:tint="@color/colorGray"
+                    android:layout_marginStart="4dp"
+                    />
+
+                <TextView
+                    android:id="@+id/DPVdislikeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/colorGray"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:padding="2dp"
+                    android:textSize="16sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/DPVpostBtn"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:text="Post"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/light_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_gravity="right"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

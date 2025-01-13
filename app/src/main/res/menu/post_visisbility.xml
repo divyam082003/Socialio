@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/post_public"
+        android:icon="@drawable/public_post"
+        android:title="Public" />
+
+    <item
+        android:id="@+id/post_followers"
+        android:icon="@drawable/ic_followers"
+        android:title="Followers" />
+
+    <item
+        android:id="@+id/post_private"
+        android:icon="@drawable/private_post"
+        android:title="Private" />
+
+
+
+</menu>

@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()  // You may see a deprecation warning, but it’s still used by some libraries
+        maven { url "https://jitpack.io" }  // Add JitPack repository here
+    }
+    dependencies {
+        classpath libs.gradle // Check the latest version
+        classpath libs.google.services
+    }
+}
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+alias(libs.plugins.androidApplication) apply false
+}
+

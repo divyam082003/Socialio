@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        android:layout_margin="4dp"
+        android:inputType="textPersonName"
+        android:fontFamily="@font/roboto_light"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+
+
+    <EditText
+        android:id="@+id/phoneET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone Number"
+        android:layout_margin="4dp"
+        android:inputType="phone"
+        android:fontFamily="@font/roboto_light"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+
+</LinearLayout>

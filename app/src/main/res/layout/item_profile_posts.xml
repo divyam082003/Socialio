@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="0.8dp"
+    >
+
+    <!-- Background image for the post -->
+    <ImageView
+        android:id="@+id/postImageView"
+        android:layout_width="150dp"
+        android:layout_height="175dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/post_sample"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <!-- Translucent overlay -->
+    <View
+        android:id="@+id/translucentOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        app:layout_constraintTop_toTopOf="@id/postImageView"
+        app:layout_constraintLeft_toLeftOf="@id/postImageView"
+        app:layout_constraintRight_toRightOf="@id/postImageView"
+        app:layout_constraintBottom_toBottomOf="@id/postImageView"
+        /> <!-- Black with 50% opacity -->
+
+    <!-- Text overlay for post content -->
+    <TextView
+        android:id="@+id/profilePostTV"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Post Content"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="2dp"
+        app:layout_constraintTop_toTopOf="@id/postImageView"
+        app:layout_constraintBottom_toTopOf="@id/likeDislikeContainer"
+        app:layout_constraintLeft_toLeftOf="@id/postImageView"
+        app:layout_constraintRight_toRightOf="@id/postImageView"
+        android:fontFamily="@font/roboto_medium"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+
+    <!-- Bottom section for like and dislike icons with counts -->
+    <LinearLayout
+        android:id="@+id/likeDislikeContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/postImageView"
+        app:layout_constraintLeft_toLeftOf="@id/postImageView"
+        app:layout_constraintRight_toRightOf="@id/postImageView"
+        >
+
+        <!-- Like icon and count -->
+        <ImageView
+            android:id="@+id/likeIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_like"
+            android:contentDescription="Like Icon"
+            app:tint="@color/white"
+            /> <!-- Replace with your like icon -->
+
+        <TextView
+            android:id="@+id/likesCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_medium"
+            />
+
+        <!-- Dislike icon and count -->
+        <ImageView
+            android:id="@+id/dislikeIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/dislike"
+            android:contentDescription="disLike Icon"
+            app:tint="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/dislikesCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_medium"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
